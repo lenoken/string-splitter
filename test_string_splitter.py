@@ -39,3 +39,17 @@ def test_split_one_string_result_array_of_one(self):
 
     # assert
     assert result == expResult
+
+def test_split_two_strings_result_array_of_two(self):
+    # arrange
+    stringToSplit = "java, python"
+    regex = ","
+    expResult = ["java", "python"]
+    result = None
+    cut = string_splitter.TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
